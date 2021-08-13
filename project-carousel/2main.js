@@ -1,25 +1,25 @@
-const slider = document.querySelector('.carousel');
+const carousel = document.querySelector('.carousel');
 let isDown = false;
 let startX;
 let scrollLeft;
 
-slider.addEventListener('mousedown', e => {
+carousel.addEventListener('mousedown', e => {
     isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
+    carousel.classList.add('active');
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
 });
 
-slider.addEventListener('mouseleave', e => {
+carousel.addEventListener('mouseleave', e => {
     isDown = false;
-    slider.classList.remove('active');
+    carousel.classList.remove('active');
 });
 
-slider.addEventListener('mousemove', e => {
+carousel.addEventListener('mousemove', e => {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
+    const slider = e.pageX - carousel.offsetLeft;
     const SCROLL_SPEED = 2;
-    const walk = (x - startX) * SCROLL_SPEED;
-    slider.scrollLeft = scrollLeft - walk;
+    const walk = (slider - startX) * SCROLL_SPEED;
+    carousel.scrollLeft = scrollLeft - walk;
 });
