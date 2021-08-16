@@ -10,5 +10,8 @@ def index(request):
 def map(request):
      return render(request, 'places/map.html')
 
+def opening(request):
+    return render(request, 'places/opening.html')
+
 # def home(request):
 #     return render(request, 'places/home.html')

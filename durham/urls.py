@@ -23,6 +23,6 @@ from django.contrib import admin
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="home"),
-    path('places/map', views.map, name='map'),
+    path('places/opening', views.opening, name='opening'),
     
 ]

@@ -1,6 +1,6 @@
-// var splitText = new SplitText('h1', {type: 'chars'});
+// let splitText = new SplitText('h1', {type: 'chars'});
 
-// var tl = gsap.timeline();
+// let tl = gsap.timeline();
 
 
 // tl
