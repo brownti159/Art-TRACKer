@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from places import views
+from django.urls.conf import include
+from django.conf.urls import url
+from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/index', views.index, name='index'),
+    path('', views.index, name="home"),
+    path('places/map', views.map, name='map'),
     
 ]
