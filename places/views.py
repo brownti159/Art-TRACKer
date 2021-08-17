@@ -13,5 +13,8 @@ def map(request):
 def opening(request):
     return render(request, 'places/opening.html')
 
+def hamburger(request):
+    return render(request, 'places/hamburger.html')
+
 # def home(request):
 #     return render(request, 'places/home.html')
