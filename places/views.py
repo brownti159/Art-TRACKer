@@ -1,3 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    return render(request, 'places/home.html')
+
+def map(request):
+     return render(request, 'places/map.html')
+
+def hamburger(request):
+    return render(request, 'places/hamburger.html')
+
