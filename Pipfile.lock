@@ -32,7 +32,6 @@
             "index": "pypi",
             "version": "==3.2.6"
         },
-<<<<<<< HEAD
         "django-registration-redux": {
             "hashes": [
                 "sha256:e3d123354a1b8cbfa005d60f1ebb89ae8541f3eaffd6174d9f2aff529b57e430",
@@ -40,7 +39,7 @@
             ],
             "index": "pypi",
             "version": "==2.9"
-=======
+        },
         "pillow": {
             "hashes": [
                 "sha256:0b2efa07f69dc395d95bb9ef3299f4ca29bcb2157dc615bae0b42c3c20668ffc",
@@ -85,7 +84,6 @@
             ],
             "index": "pypi",
             "version": "==8.3.1"
->>>>>>> main
         },
         "pytz": {
             "hashes": [
