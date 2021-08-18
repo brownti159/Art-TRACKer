@@ -5,7 +5,7 @@ from django.db.models.fields.related import ManyToManyField
 # Create your models here.
 class Artist(models.Model):
     name = models.CharField(max_length=200)
-    website = models.URLField(blank=True)
+    website = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -19,8 +19,7 @@ class Work(models.Model):
     category = models.CharField(max_length=20, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     # artistStatement = soundbyte?
-    photo = models.ImageField
-    artistWebsite = models.URLField(blank=True, null=True)
+    photo = models.ImageField(blank=True, null=True)
     notes = models.TextField(blank=True, null=True)
     wheelchairAccessible = models.BooleanField(blank=True, null=True)
 
