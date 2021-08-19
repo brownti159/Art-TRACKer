@@ -28,5 +28,22 @@ class Migration(migrations.Migration):
             model_name='user',
             name='location',
             field=models.CharField(blank=True, max_length=30, null=True),
+        ),    
+
+        migrations.CreateModel(
+            name='Work',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(blank=True, max_length=200, null=True)),
+                ('year', models.IntegerField(blank=True, null=True)),
+                ('latitude', models.DecimalField(blank=True, decimal_places=6, max_digits=9, null=True)),
+                ('longitude', models.DecimalField(blank=True, decimal_places=6, max_digits=9, null=True)),
+                ('category', models.CharField(blank=True, max_length=20, null=True)),
+                ('description', models.TextField(blank=True, null=True)),
+                ('artistWebsite', models.URLField(blank=True, null=True)),
+                ('notes', models.TextField(blank=True, null=True)),
+                ('wheelchairAccessible', models.BooleanField(blank=True, null=True)),
+                ('creators', models.ManyToManyField(related_name='works', to='places.Artist')),
+            ],
         ),
     ]

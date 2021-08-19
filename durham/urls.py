@@ -20,7 +20,6 @@ from places import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.simple.urls')),
     path('', views.index, name="home"),
     path('places/hamburger', views.hamburger, name='hamburger'),
