@@ -5,7 +5,6 @@ let map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
 
-
 });
 
 map.addControl(
@@ -14,28 +13,39 @@ accessToken: mapboxgl.accessToken,
 mapboxgl: mapboxgl
 }));
 
+let artWorks = {
+    "longitude" :  -78.9048045,
+    "latitude" : 35.9968398,
+    "title" : "Pleiades Gallery",
+    "year" : "2015", 
+    "creators" : "Kim-n-friends",
+    "photo" : "./img/bull.jpeg",
+    "description" : "This was Kim's gallery."
+}
+
 const marker1 = new mapboxgl.Marker()
 .setLngLat([-78.9048045, 35.9968398])
 .addTo(map);
 
-// let layers
+function addPopup (work) {
 
-map.on('click', function(e) {
-    let features = map.queryRenderedFeatures(e.point, {
-        // layers: ['durham-art']
-    });
-    if (!features.length) {
-        console.log(features)
-        return;
-    }
-    let feature = features[0];
-
-    let popup1 = new mapboxgl.Popup({ offset: [0, -15] })
-        .setLngLat([-78.9048045, 35.9968398])
+    map.on('click', (e) => {
+        let features = map.queryRenderedFeatures(e.point, {
+        });
+        if (!features.length) {
+            return;
+        }
+        let feature = features[0];
+        
+        let popup1 = new mapboxgl.Popup({ offset: [0, -15] })
+        .setLngLat([work.longitude, work.latitude])
         .setHTML(
-            '<h3>' + "Pleiades" + '</h3>' +
+            '<h3>' + `${work.title}` + '</h3>' +
             // '<img>' + feature.properties.image + '</img>' +
-            '<p>' + feature.properties.description + '</p>'
-        )
-        .addTo(map);
-});
+            '<p>' + `${work.description}` + '</p>'
+            )
+            .addTo(map);
+        });
+}
+
+addPopup(artWorks)
