@@ -17,3 +17,25 @@ mapboxgl: mapboxgl
 const marker1 = new mapboxgl.Marker()
 .setLngLat([-78.9048045, 35.9968398])
 .addTo(map);
+
+// let layers
+
+map.on('click', function(e) {
+    let features = map.queryRenderedFeatures(e.point, {
+        // layers: ['durham-art']
+    });
+    if (!features.length) {
+        console.log(features)
+        return;
+    }
+    let feature = features[0];
+
+    let popup1 = new mapboxgl.Popup({ offset: [0, -15] })
+        .setLngLat([-78.9048045, 35.9968398])
+        .setHTML(
+            '<h3>' + "Pleiades" + '</h3>' +
+            // '<img>' + feature.properties.image + '</img>' +
+            '<p>' + feature.properties.description + '</p>'
+        )
+        .addTo(map);
+});
