@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2xvbWJhcmRpIiwiYSI6ImNrcnpuM3R1dTA4NmIydm9jdHVhNXFudGIifQ.Wuy9V0zOtcfLgdX7efVAWw';
 let map = new mapboxgl.Map({
     center: [-78.9040881, 35.9964035,],
-    zoom: 10,
+    zoom: 15,
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
 
@@ -32,20 +32,36 @@ let artWorks = [{
     "photo" : "./static/img/logo.jpg",
 }]
 
+// marker.addEventListener('mousemove', function(e) {
+//     var coordinates = map.unproject([e.x, e.y]);
+//     popup.setLngLat(coordinates)
+//       .setText('Meow')
+//       .addTo(map); 
+//   });
+
 const marker1 = new mapboxgl.Marker()
 .setLngLat([-78.9048045, 35.9968398])
 .addTo(map);
-console.log(marker1)
-marker1._element.addEventListener('click', (e) => {
-    console.log(e.point)
-        let popup = new mapboxgl.Popup({ offset: [0, -50] })       
-        .setLngLat([-78.9048045, 35.9968398])     
+
+let markerDiv = marker1.getElement()
+console.log(markerDiv)
+
+
+markerDiv.addEventListener('click', (e) => {
+    // console.log("addEventListener")
+    // let coordinates = map.unproject([e.x, e.y]);
+    // console.log(coordinates)
+    let popup = new mapboxgl.Popup() 
+    console.log(popup)
+    popup.setLngLat([-78.9048045, 35.9968398])
+        .setText('Meow')
         .setHTML(
             '<h3>' + "Pleiades Gallery" + '</h3>' +
             '<img src="./static/img/pleiades.jpg" width="200" height="150"></img>'
             )
         .addTo(map);
-})
+        console.log(popup)
+});
 
 const marker2 = new mapboxgl.Marker()
 .setLngLat([-78.903233, 35.9971451])
