@@ -23,5 +23,6 @@ urlpatterns = [
     path('accounts/', include('registration.backends.simple.urls')),
     path('', views.index, name="home"),
     path('places/hamburger', views.hamburger, name='hamburger'),
+    path('work/<int:pk>', views.details, name='detail')
 
 ]
