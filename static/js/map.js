@@ -34,9 +34,8 @@ let artWorks = [{
     "photo" : "./static/img/logo.jpg",
 }]
 
-function setMarker(works) {
-    let markers = []
-    for (let work of works) {
+function setMarkers(works) {
+    for (let work of works){
         let marker = new mapboxgl.Marker()
         .setLngLat([work.longitude, work.latitude])
         .addTo(map);
@@ -46,15 +45,15 @@ function setMarker(works) {
             popup.setLngLat(coordinates)
                 .setHTML(
                     '<h3>' + `${work.title}` + '</h3>' +
-                    `<img src=${work.photo} width="200", height="150"></img>`
+                    `<img src=${work.photo} width="200" height="150"></img>`
                     )
-                .addTo(map)
-        });    
+                .addTo(map);                
+        });
 
-    div.addEventListener('mouseout', (e) => {
-        popup.remove()
-    })
-    }
+        div.addEventListener('mouseout', (e) => {
+            popup.remove()
+        })
+        }
 }
 
-setMarker(artWorks)
+setMarkers(artWorks)
