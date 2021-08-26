@@ -13,6 +13,7 @@ accessToken: mapboxgl.accessToken,
 mapboxgl: mapboxgl
 }));
 
+let popup = new mapboxgl.Popup({closeButton: false}) 
 let artWorks = [{
     "longitude" :  -78.9048045,
     "latitude" : 35.9968398,
@@ -39,51 +40,34 @@ let artWorks = [{
 //       .addTo(map); 
 //   });
 
-const marker1 = new mapboxgl.Marker()
-.setLngLat([-78.9048045, 35.9968398])
-.addTo(map);
+// For every object in the artWorks, we want 
+// 1 - marker on the map
+// 2 - add event lister to marker's div for popup
 
-let markerDiv = marker1.getElement()
-console.log(markerDiv)
-
-
-markerDiv.addEventListener('click', (e) => {
-    // console.log("addEventListener")
-    // let coordinates = map.unproject([e.x, e.y]);
-    // console.log(coordinates)
-    let popup = new mapboxgl.Popup() 
-    console.log(popup)
-    popup.setLngLat([-78.9048045, 35.9968398])
-        .setText('Meow')
-        .setHTML(
-            '<h3>' + "Pleiades Gallery" + '</h3>' +
-            '<img src="./static/img/pleiades.jpg" width="200" height="150"></img>'
-            )
+function setMarkers(works) {
+    for (let work of works){
+        let marker = new mapboxgl.Marker()
+        .setLngLat([work.longitude, work.latitude])
         .addTo(map);
-        console.log(popup)
-});
+        let div = marker.getElement()
+        div.addEventListener('mouseover', (e) => {
+            let coordinates = map.unproject([e.x, e.y]);
+            console.log(coordinates)
+            console.log(popup)
+            popup.setLngLat(coordinates)
+                .setHTML(
+                    '<h3>' + `${work.title}` + '</h3>' +
+                    `<img src=${work.photo} width="200" height="150"></img>`
+                    )
+                .addTo(map);
+                console.log(popup)
+                
+        });
 
-const marker2 = new mapboxgl.Marker()
-.setLngLat([-78.903233, 35.9971451])
-.addTo(map);
+        div.addEventListener('mouseout', (e) => {
+            popup.remove()
+        })
+        }
+}
 
-// function addPopup (workArray) {
-//     map.on('click', (e) => {
-//         let pinLat = e.lngLat.lat
-//         let pinLng = e.lngLat.lng
-        // let features = map.queryRenderedFeatures(e.point, {
-        // });
-        // if (!features.length) {
-        //     return;
-        // }
-        // let feature = features[0];
-        // console.log(feature)
-
-//         for (let work of workArray) {
-//             console.log (pinLat, pinLng)
-//             console.log(work.latitude, work.longitude)
-//             }
-//         };
-//     });
-// }
-//         addPopup(artWorks)
+setMarkers(artWorks)
