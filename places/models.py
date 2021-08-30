@@ -23,7 +23,7 @@ class User(AbstractUser):
 
 class Work(models.Model):
     title = models.CharField(max_length=200, blank=True, null=True)
-    creators = models.ManyToManyField(Artist, related_name="works")
+    creators = models.ManyToManyField(Artist, related_name="works", blank=True, null=True)
     year = models.IntegerField(blank=True, null=True)
     latitude = models.DecimalField(
         max_digits=9, decimal_places=6, blank=True, null=True)
@@ -38,3 +38,6 @@ class Work(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['title']

@@ -7,6 +7,9 @@ name = "pypi"
 django = "*"
 django-registration-redux = "*"
 pillow = "*"
+djangorestframework = "*"
+django-extensions = "*"
+httpie = "*"
 
 [dev-packages]
 
