@@ -9,14 +9,14 @@
 <body>
     <article>
         <img src={{work.photo}}>
-        <p>{{work.title}}</p>
+        <p>Title:{{work.title}}</p>
         {% for artist in work.creators.all %}
-        <p>{{artist}}</p>
+        <p>Creator:{{artist}}</p>
         {% endfor %}
-        <p>{{work.year}}</p>
-        <p>{{work.category}}</p>
-        <p>{{work.description}}</p>
-        <p>{{work.wheelchairAccessible}}</p>
+        <p>Year Created:{{work.year}}</p>
+        <p>Type:{{work.category}}</p>
+        <p>Description:{{work.description}}</p>
+        <p>Wheelchair Accessible:{{work.wheelchairAccessible}}</p>
     </article>
 </body>
 </html>
