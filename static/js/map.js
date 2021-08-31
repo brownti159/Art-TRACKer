@@ -15,7 +15,7 @@ accessToken: mapboxgl.accessToken,
 mapboxgl: mapboxgl
 }));
 
-let popup = new mapboxgl.Popup({closeButton: false, offset: [0, -15]}) 
+let popup = new mapboxgl.Popup({closeButton: true, offset: [0, -15]}) 
 
 
 function setMarkers(works) {
@@ -24,19 +24,35 @@ function setMarkers(works) {
         .setLngLat([work.longitude, work.latitude])
         .addTo(map);
         let div = marker.getElement()
-        div.addEventListener('mouseover', (e) => {
+        div.addEventListener('click', (e) => {
+            console.log(e)
             let coordinates = map.unproject([e.x, e.y]);
             popup.setLngLat(coordinates)
                 .setHTML(
                     '<h3>' + `${work.title}` + '</h3>' +
                     `<img src=${work.photo} width="200" height="150"></img>`
                     )
-                .addTo(map);                
+                .addTo(map);
+                e.stopPropagation();              
         });
 
-        div.addEventListener('mouseout', (e) => {
-            popup.remove()
-        })
+        // div.addEventListener('mouseleave', (e) => {
+        //     popup.remove()
+        // })
+        // div.addEventListener('touchstart', (e) => {
+        //     console.log(e)
+        //     let coordinates = map.unproject([e.x, e.y]);
+        //     popup.setLngLat(coordinates)
+        //         .setHTML(
+        //             '<h3>' + `${work.title}` + '</h3>' +
+        //             `<img src=${work.photo} width="200" height="150"></img>`
+        //             )
+        //         .addTo(map);                
+        // });
+
+        // div.addEventListener('touchend', (e) => {
+        //     popup.remove()
+        // })
         }
 }
 
