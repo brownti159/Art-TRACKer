@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Details</title>
-</head>
+{% extends 'base.html' %}
+
+{% block content %}
 <body>
     <article>
-        <img src={{work.photo}}>
+        <img class="photo" src="{{work.photo.url}}">
         <p>Title:{{work.title}}</p>
         {% for artist in work.creators.all %}
-        <p>Creator:{{artist}}</p>
+        <p>Artist:{{artist}}</p>
         {% endfor %}
         <p>Year Created:{{work.year}}</p>
         <p>Type:{{work.category}}</p>
@@ -19,4 +14,5 @@
         <p>Wheelchair Accessible:{{work.wheelchairAccessible}}</p>
     </article>
 </body>
+{% endblock %}
 </html>
