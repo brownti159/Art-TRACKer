@@ -27,7 +27,6 @@ urlpatterns = [
     path('places/hamburger', views.hamburger, name='hamburger'),
     path('api/', include('places.urls')),
     path('works/<int:pk>', views.details, name='detail')
-
 ]
 if settings.DEBUG == True:
     urlpatterns += static(settings.MEDIA_URL,
