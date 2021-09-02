@@ -4,12 +4,17 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from places.models import Artist, Work
 from places.serializers import ArtistSerializer, WorkSerializer
+from django.shortcuts import render, get_object_or_404
+from .models import Work
+
 
 def index(request):
     return render(request, 'places/home.html')
 
+
 def map(request):
     return render(request, 'places/map.html')
+
 
 def hamburger(request):
     return render(request, 'places/hamburger.html')
@@ -97,3 +102,7 @@ def work_detail(request, pk):
     elif request.method == 'DELETE':
         work.delete()
         return HttpResponse(status=204)
+
+def details(request, pk):
+    work = get_object_or_404(Work, pk=pk)
+    return render(request, 'places/details.html',{"work":work} )
