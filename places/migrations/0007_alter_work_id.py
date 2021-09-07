@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='work',
             name='id',
-            field=models.IntegerField(default=2, primary_key='True', serialize=False),
+            field=models.IntegerField(default=None, primary_key='True', serialize=False),
         ),
     ]
