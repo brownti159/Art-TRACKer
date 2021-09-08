@@ -4,7 +4,7 @@
 <body>
     <article>
         <img class="photo" src="{{work.photo.url}}">
-        <p>Title:{{work.title}}</p>
+        <p class="font-Montserrat text-indigo-700">Title:{{work.title}}</p>
         {% for artist in work.creators.all %}
         <p>Artist:{{artist}}</p>
         {% endfor %}
