@@ -79,6 +79,10 @@ work_data = (
     ("Visionary Leadership in the New South", 2009, 35.9962457, -78.9016548, "sculpture", True),
     ("A Black Capital for the World to See", 2009, 35.9960558, -78.9009963, "sculpture", True),
     ("Financial and Professional Impact in Durham", 2009, 35.9956194, -78.9003559, "sculpture", True),
+    ("A Legacy of Community and Institutional Connections", 2009, 35.9960314, -78.9003204, "sculpture", True),
+    ("Empowering and Diverse Opportunities", 2009, 35.9949640, -78.8989558, "sculpture", True), 
+    ("Tobacco and E.J. Parish", 2009, 35.9952052, -78.8993920, "sculpture", True), 
+    ("The Drain on Main", 2017, 35.9966561, -78.903862, "mural", True), 
     
 
 )
