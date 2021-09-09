@@ -25,7 +25,7 @@ urlpatterns = [
     path('accounts/', include('registration.backends.simple.urls')),
     path('', views.index, name="home"),
     path('places/hamburger', views.hamburger, name='hamburger'),
-    path('works/<int:pk>', views.details, name='detail')
+    path('work/<int:pk>', views.details, name='detail')
 
 ]
 if settings.DEBUG == True:

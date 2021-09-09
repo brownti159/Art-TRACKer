@@ -377,15 +377,11 @@ html {
 body {
   font-family: inherit;
   line-height: inherit;
+  
 }
 
-H2 {
-  font-family: Work Sans;
-  font-style: normal;
+h2{
   font-weight: bold;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: -0.02em
 }
 
 /**
