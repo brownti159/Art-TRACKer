@@ -1,18 +1,42 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<body>
-    <article>
-        <img class="photo" src="{{work.photo.url}}">
-        <p class="font-Montserrat text-indigo-700">Title:{{work.title}}</p>
-        {% for artist in work.creators.all %}
-        <p>Artist:{{artist}}</p>
-        {% endfor %}
-        <p>Year Created:{{work.year}}</p>
-        <p>Type:{{work.category}}</p>
-        <p>Description:{{work.description}}</p>
-        <p>Wheelchair Accessible:{{work.wheelchairAccessible}}</p>
-    </article>
+<body class="leading-normal">
+    <div class="max-w-4xl flex items-center h-auto lg:h-screen flex wrap mx-auto my-32 lg:my-0">
+        <div class="w-full lg:w-4/5 lg:rounded-l-lg lg:rounded-r-none mx-6 lg:mx-0">
+             <!-- <div class="block lg:hidden rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" src="{{work.photo}}"></div> -->
+            <!-- <img class="block lg:hidden rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" src="{{work.photo.url}}"> -->
+            <img class="object-contain md:object-scale-down rounded-md border-4 border-black mb-8" src="{{work.photo.url}}"> 
+        
+            <div class="text-center grid-cols rounded-md border-black border-4 ">
+                <div class="grid-row">
+                    <h2 class="text-xl underline">Title:</h2>
+                    <p>{{work.title}}</p>
+                </div>
+                {% for artist in work.creators.all %}
+                <h2 class="text-xl underline">Artist:</h2>
+                <p>{{artist}}</p>
+                {% endfor %}
+                <div>
+                    <h2 class="text-xl underline">Year Created:</h2>
+                    <p>{{work.year}}</p>
+                </div>
+                <div>
+                    <h2 class="text-xl underline">Type:</h2>
+                    <p>{{work.category}}</p>
+                </div>
+                <div>
+                    <h2 class="text-xl underline">Description:</h2>
+                    <p>{{work.description}}</p>
+                </div>
+                <div>
+                    <h2 class="text-xl underline">Wheelchair Accessible:</h2>
+                    <p>{{work.wheelchairAccessible}}</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
 </body>
 {% endblock %}
 </html>
