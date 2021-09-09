@@ -7,6 +7,11 @@ from django.db.models.fields.related import ManyToManyField
 
 # Create your models here.
 
+class User(AbstractUser):
+    art_interest = models.TextField(max_length=500, blank=True, null=True)
+    location = models.CharField(max_length=30, blank=True, null=True)
+
+
 
 class Artist(models.Model):
     name = models.CharField(max_length=200)
@@ -15,15 +20,14 @@ class Artist(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['name']
 
-class User(AbstractUser):
-    art_interest = models.TextField(max_length=500, blank=True, null=True)
-    location = models.CharField(max_length=30, blank=True, null=True)
 
 
 class Work(models.Model):
     title = models.CharField(max_length=200, blank=True, null=True)
-    creators = models.ManyToManyField(Artist, related_name="works")
+    artists = models.ManyToManyField(Artist, related_name="works", blank=True)
     year = models.IntegerField(blank=True, null=True)
     latitude = models.DecimalField(
         max_digits=9, decimal_places=6, blank=True, null=True)
@@ -38,3 +42,6 @@ class Work(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['title']
