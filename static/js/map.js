@@ -43,7 +43,8 @@ function setMarkers(works) {
             popup.setLngLat(coordinates)
                 .setHTML(
                     '<h3>' + `${work.title}` + '</h3>' +
-                    `<img src=${work.photo} width="200" height="150"></img>`
+                    `<img src=${work.photo} width="200" height="150"></img>` +
+                    '<button>' + "see details" + '</button>'
                     )
                 .addTo(map);
                 e.stopPropagation();              

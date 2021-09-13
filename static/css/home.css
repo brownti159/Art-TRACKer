@@ -15,7 +15,11 @@ body {
     height: 70vh;
 }
 
-
+/* code below is to align hamburger, logo, and top text*/
+#box {
+    display: flex;
+    justify-content: space-around;
+}
 
 @-webkit-keyframes inM {
     50% {
@@ -161,7 +165,7 @@ body {
 
 .myH2 {
 	text-align:center;
-	font-size: 4rem;
+	font-size: 3rem;
 }
 .myP {
 	text-align: justify;
