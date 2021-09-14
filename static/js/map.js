@@ -7,11 +7,20 @@ style: 'mapbox://styles/mapbox/streets-v11',
 
 });
 
+
 map.addControl(
-new MapboxGeocoder({
-accessToken: mapboxgl.accessToken,
-mapboxgl: mapboxgl
-}));
+    new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+    }));
+    
+    
+map.addControl(
+    new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+    }),
+    'top-left'
+    );
 
 let artWorks;
 
