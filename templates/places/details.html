@@ -22,7 +22,14 @@
           </nav>
           </section>
     </section>
-    
+    <div>
+        <button onclick="goBack()">Go Back</button>
+        <script>
+            function goBack() {
+              window.history.back();
+            }
+            </script>
+    </div>
     <div class="max-w-4xl flex items-center h-auto lg:h-screen flex wrap mx-auto my-32 lg:my-0">
         <div class="w-full lg:w-4/5 lg:rounded-l-lg lg:rounded-r-none mx-6 lg:mx-0">
             <img class="object-contain md:object-scale-down rounded-md border-4 border-black mb-8" src="{{work.photo.url}}"> 

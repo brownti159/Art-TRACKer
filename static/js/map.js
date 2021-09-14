@@ -43,10 +43,14 @@ function setMarkers(works) {
             popup.setLngLat(coordinates)
                 .setHTML(
                     '<h3>' + `${work.title}` + '</h3>' +
-                    `<img src=${work.photo} width="200" height="150"></img>`
+                    `<img src=${work.photo} width="200" height="150"></img>` +
+                    '<button id="detailButton" class="submit-button">See Details</button>'
                     )
                 .addTo(map);
                 e.stopPropagation();              
+            document.getElementById("detailButton").onclick = function () {
+                location.href = 'works/1';
+            };
         });
-        }
+    }
 }
