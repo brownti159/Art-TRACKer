@@ -1,10 +1,17 @@
+from django.db import models
 from models import Artist, Work
+
+# run script in shell_plus to populate database with artists and works
+# just once.  running again will create duplicates!!!
+
+# attribute artist to work in admin 
+
 
 artist_data = (
     ("Vernon Pratt", "https://www.thevernonprattproject.com/about"),
     ("Brenda Miller Holmes", "http://www.brendamillerholmes.com/about.html"),
     ("Cornelio Campos", "https://corneliocampos.web.unc.edu/"),
-    ("Cecilia Luenza", "https://lueza.com"),
+    ("Cecilia Lueza", "https://lueza.com"),
     ("Scott Nurkin", "http://themuralshop.com/"),
     ("Andria Linn", "https://www.andrialinn.com"),
     ("Olalekan “LEk” Jeyifous", "http://vigilism.com"),
@@ -42,14 +49,11 @@ artist_data = (
     ("Volkan Alkanoglu", "https://www.alkanoglu.com"),
 )
 
-# for artist in artist_data
-# Artist.object.create(name=artist[0], website=artist[1])
-# similar for work
-# attribute artist to work in admin 
-
+# works :
 # (0, 1, 2, 3, 4, 5)
 # ("string", integer, float, float, "string", Boolean)
 # (title, year, lat, long, category, wheelchair accessibility)
+
 work_data = (
     ("All the Possibilities", 1988, 35.9978484, -78.9036197, "sculpture", True),
     ("We Must Remember and Continue to Tell", 2015, 35.9978485, -78.9036197, "mural", True),
@@ -92,25 +96,16 @@ work_data = (
     ("Phat Ryan", 2009, 36.0060088, -78.9009637, "sculpture", True),
     # ("Earthsplitter", 2007, None, None, None, "sculpture", True),
     ("Purple Steam", 2020, 35.9948067, -78.8972575, "sculpture", True),
-
 )
 
 
-
-# for artist in artist_data
-# Artist.object.create(name=artist[0], website=artist[1])
-# similar for work
-# attribute artist to work in admin 
-
 def seedDatabaseArtist():
     for artist in artist_data:
-        Artist.object.create(name=artist[0], website=artist[1])
-
-
+        Artist(name=artist[0], website=artist[1]).save()
+        
 def seedDatabaseWork():
     for work in work_data:
-        Work.object.create(title=work[0], year=work[1], latitude=work[2], longitude=work[3], category=work[4], wheelChairAccessible=work[5])
-
+        Work(title=work[0], year=work[1], latitude=work[2], longitude=work[3], category=work[4], wheelchairAccessible=work[5]).save()
 
 seedDatabaseArtist()
 seedDatabaseWork()
