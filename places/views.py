@@ -15,7 +15,12 @@ def index(request):
 def map(request):
     return render(request, 'places/map.html')
 
+def about(request):
+    return render(request, 'places/about.html')
 
+def tutorial(request):
+    return render(request, 'places/tutorial.html')
+    
 def hamburger(request):
     return render(request, 'places/hamburger.html')
     
