@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block scripts %}
+{% endblock %}
 
 {% block content %}
 <body class="leading-normal bg-yellow-400">
@@ -38,8 +40,9 @@
     
     <div class="max-w-4xl flex items-center h-auto lg:h-screen flex wrap mx-auto my-32 lg:my-0">
         <div class="w-full lg:w-4/5 lg:rounded-l-lg lg:rounded-r-none mx-6 lg:mx-0">
+            {% if work.photo %}
             <img class="object-contain md:object-scale-down rounded-md border-4 border-black mb-8" src="{{work.photo.url}}"> 
-        
+            {% endif %}
             <div class="text-center grid-cols rounded-md border-black border-4 bg-white text-3xl font-Montserrat">
                 <div class="flex p-4">
                     <h2 class="pr-4 font-bold">Title:</h2>
