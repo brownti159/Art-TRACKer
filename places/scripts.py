@@ -1,3 +1,5 @@
+from models import Artist, Work
+
 artist_data = (
     ("Vernon Pratt", "https://www.thevernonprattproject.com/about"),
     ("Brenda Miller Holmes", "http://www.brendamillerholmes.com/about.html"),
@@ -57,6 +59,8 @@ work_data = (
     ("Wall of Hope", 2008, 35.9963675, -78.9027649, "mural", True),
     ("Durham in Continuum", 2018, 35.9958228, -78.9035749, "mural", True),
     ("Along the way: Snapping!, Crackling!, and Popping!", 2019, 36.0009749, -78.9014761, "crosswalk", True),
+    # ("Cracking")
+    # ("Popping")
     ("Swarm", None, 35.9951356, -78.9063472, "mural", True),
     ("Celebrate", None, 35.9946107, -78.9026999, "mural", True),
     ("Here Comes The Sun", 1975, 35.9947170, -78.8996630, "mural", True), 
@@ -83,6 +87,30 @@ work_data = (
     ("Empowering and Diverse Opportunities", 2009, 35.9949640, -78.8989558, "sculpture", True), 
     ("Tobacco and E.J. Parish", 2009, 35.9952052, -78.8993920, "sculpture", True), 
     ("The Drain on Main", 2017, 35.9966561, -78.903862, "mural", True), 
-    
+    ("The Art of the Warli in Durham", None, 35.9987581, -78.9018720, "mural", True),
+    ("Mr. Pickles", 2005, 36.0006088, -78.9009637, "sculpture", True),
+    ("Phat Ryan", 2009, 36.0060088, -78.9009637, "sculpture", True),
+    # ("Earthsplitter", 2007, None, None, None, "sculpture", True),
+    ("Purple Steam", 2020, 35.9948067, -78.8972575, "sculpture", True),
 
 )
+
+
+
+# for artist in artist_data
+# Artist.object.create(name=artist[0], website=artist[1])
+# similar for work
+# attribute artist to work in admin 
+
+def seedDatabaseArtist():
+    for artist in artist_data:
+        Artist.object.create(name=artist[0], website=artist[1])
+
+
+def seedDatabaseWork():
+    for work in work_data:
+        Work.object.create(title=work[0], year=work[1], latitude=work[2], longitude=work[3], category=work[4], wheelChairAccessible=work[5])
+
+
+seedDatabaseArtist()
+seedDatabaseWork()
