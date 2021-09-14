@@ -45,3 +45,9 @@ class Work(models.Model):
 
     class Meta:
         ordering = ['title']
+
+
+class Visited(db.Model):
+    __tablename__ = "visited"
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    work_id = db.Column(db.Integer, db.ForeignKey('work.id'))
