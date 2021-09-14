@@ -77,7 +77,7 @@ work_data = (
     ("Time Bridge", 2015, 35.9984626, -78.9032525, "mural", True),
     ("Pauli Murray from the Face Up", 2008, 35.9993035, -78.9017161, "mural", True),
     ("Liberty Warehouse Mural", None, 36.0019981, -78.9021754,"mural", True),
-    ("Untitled", None, 36.0038010, -78.9000240, "mural", True),
+    ("The Mothership Mural", None, 36.0038010, -78.9000240, "mural", True),
     ("Two Way Bridges", None, 35.9996805, -78.9104586, "mural", True),
     ("Angel of Spring", 2015, 36.0077861, -78.9221369, "mural", True),
     ("UHill Walls", 2020, 35.9671719, -78.9545263, "mural", True),
