@@ -7,14 +7,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
     {% endblock %} 
 
 {% block content %}
-
+<body class="leading-normal bg-yellow-400">
+<div id="logo">
+    <img src="{% static 'img/new_logo.png' %}" alt='logo'>
+</div>
 <section id="hamburger">
     <section class="p-menu1">
         <nav id="navbar" class="navigation" role="navigation">
-            <h2 class="myH2">Welcome To Art TRACKer</h2>
           <input id="toggle1" type="checkbox" />
           <label class="hamburger1" for="toggle1">
             <div class="top"></div>
@@ -32,7 +35,7 @@
       </nav>
       </section>
 </section>
-
+</div>
 <section id="map">
     
     
@@ -40,13 +43,13 @@
 <div style="height: 1000px">
     <!-- just to make scrolling effect possible -->
         <p class="myP"></p>
-        <p class="myP">I HOPE YOU FIND THIS USEFUL</p>
+        <p class="myP">Find public art in Durham, NC</p>
         <p class="myP">Art</p>
             <p class="myP">
             
             Info about Art TRACKer
         </p>
 </div>
-
+</body>
 {% endblock %}
 
