@@ -27,7 +27,9 @@
 </head>
     <body class="leading-normal bg-yellow-400">
         <div id="logo">
-            <img src="{% static 'img/new_logo.png' %}" alt='logo'>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/new_logo.png' %}" alt='logo'>
+             </a>
         </div>
         <section id="hamburger">
             <section class="p-menu1">
@@ -40,7 +42,6 @@
                   </label>
                 
                   <nav class="menu1">
-                    <a class="link1" href="{% url 'home' %}">Home</a>
                     <a class="link1" href="{% url 'tutorial' %}">Tutorial</a>
                     <a class="link1" href="{% url 'about' %}">About</a>
                     <a class="link1" href="">Contact</a>
