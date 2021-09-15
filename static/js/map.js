@@ -6,12 +6,13 @@ container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
 
 });
-
+        
 map.addControl(
-new MapboxGeocoder({
-accessToken: mapboxgl.accessToken,
-mapboxgl: mapboxgl
-}));
+    new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+    }),
+    'top-left'
+    );
 
 let artWorks;
 
@@ -30,6 +31,7 @@ setMarkers(artWorks)
 })
 
 let popup = new mapboxgl.Popup({closeButton: true, offset: [0, -15]}) 
+
 
 function setMarkers(works) {
     for (let work of works){
