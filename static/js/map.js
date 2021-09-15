@@ -45,10 +45,15 @@ function setMarkers(works) {
             popup.setLngLat(coordinates)
                 .setHTML(
                     '<h3>' + `${work.title}` + '</h3>' +
-                    `<img src=${work.photo} width="200" height="150"></img>`
+                    `<img src=${work.photo} width="200" height="150"></img>` +
+                    '<button id="detailButton" class="submit-button border-black border-2 px-2 rounded-md hover:bg-gray-300 ">See Details</button>' +
+                    `<data-work-id=${work.id}>`
                     )
                 .addTo(map);
                 e.stopPropagation();              
+            document.getElementById("detailButton").onclick = function () {
+                location.href = `works/${work.id}`;
+            };
         });
         }
 }

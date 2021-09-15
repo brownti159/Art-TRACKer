@@ -154,11 +154,6 @@ body {
     background-color: #111;
 }
 
-
-
-
-
-
 .myH2 {
 	text-align:center;
 	font-size: 4rem;
@@ -173,4 +168,26 @@ body {
 	.myP {
 		padding:2%;
 	}
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#goBack {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#hamburger {
+    width: 100%;
+}
+
+.menu1 {
+    width: 100%;
 }
