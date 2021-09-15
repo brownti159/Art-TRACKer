@@ -44,7 +44,7 @@ function setMarkers(works) {
                 .setHTML(
                     '<h3>' + `${work.title}` + '</h3>' +
                     `<img src=${work.photo} width="200" height="150"></img>` +
-                    '<button id="detailButton" class="submit-button bg-blue-400 px-2 rounded-md hover:bg-blue-500">See Details</button>' +
+                    '<button id="detailButton" class="submit-button border-black border-2 px-2 rounded-md hover:bg-gray-300 ">See Details</button>' +
                     `<data-work-id=${work.id}>`
                     )
                 .addTo(map);
