@@ -11,7 +11,6 @@ from .models import Work
 def index(request):
     return render(request, 'places/home.html')
 
-
 def map(request):
     return render(request, 'places/map.html')
 
@@ -20,6 +19,9 @@ def about(request):
 
 def tutorial(request):
     return render(request, 'places/tutorial.html')
+
+def contact(request):
+    return render(request, 'places/contact.html')
     
 def hamburger(request):
     return render(request, 'places/hamburger.html')

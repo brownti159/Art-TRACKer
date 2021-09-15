@@ -29,6 +29,8 @@ urlpatterns = [
     path('works/<int:pk>', views.details, name='detail'),
     path('places/about', views.about, name='about'),
     path('places/tutorial', views.tutorial, name='tutorial'),
+    path('places/contact', views.contact, name='contact'),
+
 ]
 if settings.DEBUG == True:
     urlpatterns += static(settings.MEDIA_URL,
