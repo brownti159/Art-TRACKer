@@ -36,7 +36,7 @@ class Work(models.Model):
     category = models.CharField(max_length=20, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     # artistStatement = soundbyte?
-    photo = models.ImageField(blank=True, null=True, upload_to="images")
+    photo = models.URLField(max_length=200, blank=True, null=True)
     notes = models.TextField(blank=True, null=True)
     wheelchairAccessible = models.BooleanField(blank=True, null=True)
 
