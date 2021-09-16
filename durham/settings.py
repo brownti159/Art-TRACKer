@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'places',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,13 @@ AUTH_USER_MODEL = 'places.User'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 MEDIA_URL = '/media/'
+
+AWS_ACCESS_KEY_ID = 'AKIASTPFWQ7PMNPGH24C'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'art-tracker-photos'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
