@@ -6,14 +6,19 @@ container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
 
 });
-        
+
+let directions = new MapboxDirections({
+accessToken: mapboxgl.accessToken,
+})
 map.addControl(
-    new MapboxDirections({
-    accessToken: mapboxgl.accessToken
-    }),
+    directions, 
     'top-left'
     );
-
+    map.on('load',  function() {
+        directions.setOrigin([12, 23]); // can be address in form setOrigin("12, Elm Street, NY")
+        directions.setDestination([11, 22]); // can be address
+    })
+console.log(directions)
 let artWorks;
 
 fetch("api/places/works", {
@@ -40,15 +45,27 @@ function setMarkers(works) {
         .addTo(map);
         let div = marker.getElement()
         div.addEventListener('click', (e) => {
-            console.log(e)
             let coordinates = map.unproject([e.x, e.y]);
             popup.setLngLat(coordinates)
                 .setHTML(
                     '<h3>' + `${work.title}` + '</h3>' +
+<<<<<<< Updated upstream
                     `<img src=${work.photo} width="200" height="150"></img>`
                     )
                 .addTo(map);
                 e.stopPropagation();              
+=======
+                    `<img src=${work.photo} width="200" height="150"></img>` +
+                    '<button id="detailButton" class="submit-button border-black border-2 px-2 rounded-md hover:bg-gray-300 ">See Details</button>' +
+                    `<data-work-id=${work.id}>` +
+                    `<data-work-title=${work.title}>`
+                    )
+                .addTo(map);
+                e.stopPropagation();              
+            document.getElementById("detailButton").onclick = function (e) {
+                location.href = `works/${work.id}`;
+            };
+>>>>>>> Stashed changes
         });
         }
 }
