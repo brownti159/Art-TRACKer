@@ -6,11 +6,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Art TRACKer</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/hamburger.css' %}">
     <link rel="stylesheet" href="{% static 'css/detail.css' %}">
     <link href="{% static 'css/tailwind.css' %}" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="..static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
     {% block scripts %}
     <script src="{% static 'js/home.js' %}" defer></script>
     <script src="{% static 'js/map.js' %}" type="module" defer></script>
@@ -27,7 +31,31 @@
 
     <title>Art TRACKer</title>
 </head>
-<body>
+    <body class="leading-normal bg-yellow-400">
+        <div id="logo">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo_transp.png' %}" width=200 height=200 alt='logo'>
+             </a>
+        </div>
+        <section id="hamburger">
+            <section class="p-menu1">
+                <nav id="navbar" class="navigation" role="navigation">
+                  <input id="toggle1" type="checkbox" />
+                  <label class="hamburger1" for="toggle1">
+                    <div class="top"></div>
+                    <div class="meat"></div>
+                    <div class="bottom"></div>
+                  </label>
+                
+                  <nav class="menu1">
+                      <a class="link1" href="{% url 'about' %}">About</a>
+                    <a class="link1" href="{% url 'tutorial' %}">Tutorial</a>
+                    <a class="link1" href="{% url 'contact' %}">Contact</a>
+                  </nav>
+              </nav>
+              </section>
+        </section>
+        </div>    
     {% block content %}
     {% endblock %}
 </body>
