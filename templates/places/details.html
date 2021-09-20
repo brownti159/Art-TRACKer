@@ -23,7 +23,6 @@
                 <div class="flex p-4">
                     <h2 class="pr-4 font-bold">Title:</h2>
                     <p>{{work.title}}</p>
-                    
                 </div>
                 <div class="flex p-4">
                 {% for artist in work.creators.all %}
@@ -38,6 +37,10 @@
                 <div class="flex p-4">
                     <h2 class="pr-4 font-bold">Type:</h2>
                     <p>{{work.category}}</p>
+                </div>
+                <div class="flex p-4">
+                    <h2 class="pr-4 font-bold">Artist Website:</h2>
+                    <p>{{artist.website}}</p>
                 </div>
                 <div class="flex p-4">
                     <h2 class="pr-4 font-bold">Description:</h2>
