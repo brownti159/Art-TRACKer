@@ -93,7 +93,7 @@ work_data = (
     ("The Drain on Main", 2017, 35.9966561, -78.903862, "mural", True), 
     ("The Art of the Warli in Durham", None, 35.9987581, -78.9018720, "mural", True),
     ("Mr. Pickles", 2005, 36.0006088, -78.9009637, "sculpture", True),
-    ("Phat Ryan", 2009, 36.0060088, -78.9009637, "sculpture", True),
+    ("Phat Ryan", 2009, 36.0004300, -78.9010900, "sculpture", True),
     # ("Earthsplitter", 2007, None, None, None, "sculpture", True),
     ("Purple Steam", 2020, 35.9948067, -78.8972575, "sculpture", True),
 )
