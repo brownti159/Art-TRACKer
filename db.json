@@ -910,6 +910,266 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2021-09-21T21:16:03.313Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Durham in Continuum",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2021-09-21T21:16:27.970Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "22",
+    "object_repr": "The Mothership Mural",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2021-09-21T21:17:05.172Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "35",
+    "object_repr": "The Drain on Main",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2021-09-21T21:17:24.344Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "37",
+    "object_repr": "Mr. Pickles",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2021-09-21T21:17:47.281Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "18",
+    "object_repr": "Pursuit of Happiness",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2021-09-21T21:18:11.228Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "We Must Remember and Continue to Tell",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2021-09-21T21:18:33.741Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "19",
+    "object_repr": "Time Bridge",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2021-09-21T21:18:54.857Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "14",
+    "object_repr": "Grab Life by the Horns",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2021-09-21T21:24:44.955Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "We Must Remember and Continue to Tell",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2021-09-21T21:25:42.239Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "16",
+    "object_repr": "Major the Bull",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2021-09-21T21:34:23.254Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "All the Possibilities",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2021-09-21T21:34:42.277Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Along the way: Snapping!, Crackling!, and Popping!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2021-09-21T21:35:00.032Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "24",
+    "object_repr": "Angel of Spring",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2021-09-21T21:36:36.541Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "24",
+    "object_repr": "Angel of Spring",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Notes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2021-09-21T21:37:11.486Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "14",
+    "object_repr": "Grab Life by the Horns",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Notes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2021-09-21T21:37:38.756Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Along the way: Snapping!, Crackling!, and Popping!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Notes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2021-09-21T21:38:20.630Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "26",
+    "object_repr": "Pepsi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2021-09-21T21:44:12.529Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "28",
+    "object_repr": "El Futuro Mural",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2021-09-21T21:45:13.232Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "UHill Walls",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\", \"Notes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2021-09-21T21:45:40.960Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "28",
+    "object_repr": "El Futuro Mural",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Notes\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -1803,7 +2063,7 @@
     "longitude": "-78.903620",
     "category": "sculpture",
     "description": "",
-    "photo": "",
+    "photo": "images/all_the_possibilities_480x320.png",
     "notes": "",
     "wheelchairAccessible": true,
     "artists": [
@@ -1820,8 +2080,8 @@
     "latitude": "35.997848",
     "longitude": "-78.903620",
     "category": "mural",
-    "description": "",
-    "photo": "",
+    "description": "Created by a community of artists, the mural depicts local leaders in the fight for  civil rights, including Dr. Aaron Moore, who founded the first hospital for African-Americans in Durham; Richard Fitzgerald, who was a successful  brick maker in Durham; Ann Atwater, a civil rights activist; and C.P. Ellis, a  former KKK leader who became an unlikely friend of Atwater’s, changing from  an advocate for segregation to one of desegregation (source: https://durhamnc.gov/3245/Public-Art-Collection).",
+    "photo": "images/we_must_remember_480x320.png",
     "notes": "",
     "wheelchairAccessible": true,
     "artists": [
@@ -1911,7 +2171,7 @@
     "longitude": "-78.903575",
     "category": "mural",
     "description": "",
-    "photo": "",
+    "photo": "images/durham_in_continuum.png",
     "notes": "",
     "wheelchairAccessible": true,
     "artists": [
@@ -1928,9 +2188,9 @@
     "latitude": "36.000975",
     "longitude": "-78.901476",
     "category": "crosswalk",
-    "description": null,
-    "photo": "",
-    "notes": null,
+    "description": "",
+    "photo": "images/along_the_way_480x320.png",
+    "notes": "source: https://durhamnc.gov/3245/Public-Art-Collection",
     "wheelchairAccessible": true,
     "artists": []
   }
@@ -2017,8 +2277,8 @@
     "longitude": "-78.902896",
     "category": "mural",
     "description": "",
-    "photo": "",
-    "notes": "",
+    "photo": "images/grab_life_by_the_horns_480x320.png",
+    "notes": "source: https://www.allpublicart.com/artwork-details/13447",
     "wheelchairAccessible": true,
     "artists": [
       14
@@ -2052,7 +2312,7 @@
     "latitude": "35.996327",
     "longitude": "-78.901446",
     "category": "sculpture",
-    "description": "",
+    "description": "Major was cast in bronze and created from start to finish in Durham at Liberty Arts, a Studio and Foundry dedicated to enriching our communities with arts experiences that inspire, empower, educate, and entertain. The sculpture and plaza were gifted through a grant by The Central Carolina Bank to the citizens of Durham (source: https://durhamnc.gov/3245/Public-Art-Collection).",
     "photo": "images/major_the_bull_480x320.png",
     "notes": "",
     "wheelchairAccessible": true,
@@ -2089,7 +2349,7 @@
     "longitude": "-78.903723",
     "category": "sculpture",
     "description": "",
-    "photo": "",
+    "photo": "images/pursuit_of_happiness_480x320.png",
     "notes": "",
     "wheelchairAccessible": true,
     "artists": [
@@ -2107,7 +2367,7 @@
     "longitude": "-78.903252",
     "category": "mural",
     "description": "",
-    "photo": "",
+    "photo": "images/time_bridge_480x320.png",
     "notes": "",
     "wheelchairAccessible": true,
     "artists": [
@@ -2161,7 +2421,7 @@
     "longitude": "-78.900024",
     "category": "mural",
     "description": "",
-    "photo": "",
+    "photo": "images/the_mothership_480x320.png",
     "notes": "",
     "wheelchairAccessible": true,
     "artists": [
@@ -2197,8 +2457,8 @@
     "longitude": "-78.922137",
     "category": "mural",
     "description": "",
-    "photo": "",
-    "notes": "",
+    "photo": "images/angel_of_spring_480x320.png",
+    "notes": "source: http://www.muraldurham.com/angel-of-spring",
     "wheelchairAccessible": true,
     "artists": [
       11
@@ -2215,29 +2475,11 @@
     "longitude": "-78.954526",
     "category": "mural",
     "description": "",
-    "photo": "",
-    "notes": "",
+    "photo": "images/u_hills_480x320.png",
+    "notes": "source: https://www.discoverdurham.com/",
     "wheelchairAccessible": true,
     "artists": [
       24
-    ]
-  }
-},
-{
-  "model": "places.work",
-  "pk": 26,
-  "fields": {
-    "title": "Pepsi",
-    "year": null,
-    "latitude": "35.982004",
-    "longitude": "-78.880393",
-    "category": "mural",
-    "description": "",
-    "photo": "",
-    "notes": "",
-    "wheelchairAccessible": true,
-    "artists": [
-      25
     ]
   }
 },
@@ -2269,8 +2511,8 @@
     "longitude": "-78.917508",
     "category": "mural",
     "description": "",
-    "photo": "",
-    "notes": "",
+    "photo": "images/el_futuro_480x320.png",
+    "notes": "https://elfuturo-nc.org/freedom-to-be-faq/",
     "wheelchairAccessible": true,
     "artists": [
       4
@@ -2401,7 +2643,7 @@
     "longitude": "-78.903862",
     "category": "mural",
     "description": "",
-    "photo": "",
+    "photo": "images/drain_on_main_480x320.png",
     "notes": "",
     "wheelchairAccessible": true,
     "artists": [
@@ -2438,7 +2680,7 @@
     "longitude": "-78.900964",
     "category": "sculpture",
     "description": "",
-    "photo": "",
+    "photo": "images/mr_pickles.png",
     "notes": "",
     "wheelchairAccessible": true,
     "artists": [
