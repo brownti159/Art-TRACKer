@@ -5,7 +5,7 @@
 
 {% block content %}
 
-    <div id="goBack">
+    <div class="text-center">
         <button onclick="goBack()">Return to Map</button>
         <script>
             function goBack() {
@@ -23,10 +23,9 @@
                 <div class="flex p-4">
                     <h2 class="pr-4 font-bold">Title:</h2>
                     <p>{{work.title}}</p>
-                    
                 </div>
                 <div class="flex p-4">
-                {% for artist in work.creators.all %}
+                {% for artist in work.artists.all %}
                 <h2 class="pr-4 font-bold">Artist:</h2>
                 <p>{{artist}}</p>
                 {% endfor %}
@@ -42,6 +41,12 @@
                 <div class="flex p-4">
                     <h2 class="pr-4 font-bold">Description:</h2>
                     <p>{{work.description}}</p>
+                </div>
+                <div class="flex p-4">
+                {% for artist in work.artists.all %}
+                <h2 class="pr-4 font-bold">Artist's Website:</h2>
+                <p>{{artist.website}}</p>
+                {% endfor %}
                 </div>
                 <div class="flex p-4 ">
                     <h2 class="pr-4 font-bold">Wheelchair Accessible:</h2>
