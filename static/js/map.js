@@ -1,6 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2xvbWJhcmRpIiwiYSI6ImNrcnpuM3R1dTA4NmIydm9jdHVhNXFudGIifQ.Wuy9V0zOtcfLgdX7efVAWw';
 let map = new mapboxgl.Map({
-    center: [-78.9040881, 35.9964035,],
+    center: [-78.90282, 35.99860],
     zoom: 15,
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
@@ -57,7 +57,21 @@ function setMarkers(works) {
                     }),
                     'top-left'
                     );
+                    directions.setOrigin([work.longitude, work.latitude]); // can be address in form setOrigin("12, Elm Street, NY")
             };
         });
         }
 }
+
+
+
+
+// map.addControl(
+//     directions, 
+//     'top-left'
+//     );
+//     map.on('load',  function() {
+//         directions.setOrigin([12, 23]); // can be address in form setOrigin("12, Elm Street, NY")
+//         directions.setDestination([11, 22]); // can be address
+//     })
+// console.log(directions)
