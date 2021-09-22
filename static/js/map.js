@@ -7,12 +7,7 @@ style: 'mapbox://styles/mapbox/streets-v11',
 
 });
         
-map.addControl(
-    new MapboxDirections({
-    accessToken: mapboxgl.accessToken
-    }),
-    'top-left'
-    );
+
 
 let artWorks;
 
@@ -47,12 +42,21 @@ function setMarkers(works) {
                     '<h3>' + `${work.title}` + '</h3>' +
                     `<img src=${work.photo} width="200" height="150"></img>` +
                     '<button id="detailButton" class="submit-button border-black border-2 px-2 mt-2 rounded-md hover:bg-gray-300">See Details</button>' +
+                    '<button id="directionsButton" class="submit-button border-black border-2 px-2 mt-2 rounded-md hover:bg-gray-300">Get Directions</button>' +
                     `<data-work-id=${work.id}>`
                     )
                 .addTo(map);
                 e.stopPropagation();              
             document.getElementById("detailButton").onclick = function () {
                 location.href = `works/${work.id}`;
+            };
+            document.getElementById("directionsButton").onclick = function () {
+                map.addControl(
+                    new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                    }),
+                    'top-left'
+                    );
             };
         });
         }
