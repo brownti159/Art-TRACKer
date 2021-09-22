@@ -10,7 +10,8 @@ pillow = "*"
 djangorestframework = "*"
 django-extensions = "*"
 httpie = "*"
-
+gunicorn = "*"
+django-heroku = "*"
 
 [dev-packages]
 

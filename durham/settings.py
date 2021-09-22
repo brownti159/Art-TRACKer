@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import django_heroku
 from pathlib import Path
 
 
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-wjv9o)bx^h=z4j85*9-378t#oe7(8yjw-n9jy5wc_#2)oowmhg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", 'stormy-coast-33083.herokuapp.com']
 
 
 # Application definition
@@ -140,3 +141,5 @@ AUTH_USER_MODEL = 'places.User'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 MEDIA_URL = '/media/'
+
+django_heroku.settings(locals())
