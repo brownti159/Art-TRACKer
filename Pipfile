@@ -10,7 +10,8 @@ pillow = "*"
 djangorestframework = "*"
 django-extensions = "*"
 httpie = "*"
-
+django-environ = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
